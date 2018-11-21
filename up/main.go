@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"os"
 
+	"github.com/alecthomas/template"
 	"github.com/kaihendry/upwithlib"
 )
 
@@ -17,5 +17,6 @@ func main() {
 
 func hello(w http.ResponseWriter, r *http.Request) {
 	// HOW DO I KNOW bar CAME FROM "github.com/kaihendry/upwithlib/foo" ?
-	fmt.Fprintln(w, bar.HelloFromLibrary())
+	t, _ := template.ParseFiles("index.html")
+	t.Execute(w, bar.HelloFromLibrary())
 }
