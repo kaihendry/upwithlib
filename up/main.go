@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/kaihendry/upwithlib/foo"
+	"github.com/kaihendry/upwithlib"
 )
 
 func main() {
