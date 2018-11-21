@@ -16,6 +16,6 @@ func main() {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	// HOW DO I MAKE THIS WORK?
-	fmt.Fprintln(w, foo.HelloFromLibrary())
+	// HOW DO I KNOW bar CAME FROM "github.com/kaihendry/upwithlib/foo" ?
+	fmt.Fprintln(w, bar.HelloFromLibrary())
 }
