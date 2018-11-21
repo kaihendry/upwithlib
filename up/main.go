@@ -1,3 +1,5 @@
+//go:generate -command asset go run asset.go
+//go:generate asset index.html
 package main
 
 import (
@@ -5,7 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/alecthomas/template"
+	"html/template"
+
 	"github.com/kaihendry/upwithlib"
 )
 
@@ -15,8 +18,11 @@ func main() {
 	log.Fatal(http.ListenAndServe(addr, nil))
 }
 
+func html(a asset) string {
+	return a.Content
+}
+
 func hello(w http.ResponseWriter, r *http.Request) {
-	// HOW DO I KNOW bar CAME FROM "github.com/kaihendry/upwithlib/foo" ?
-	t, _ := template.ParseFiles("index.html")
+	t, _ := template.New("name").Parse(index)
 	t.Execute(w, bar.HelloFromLibrary())
 }
