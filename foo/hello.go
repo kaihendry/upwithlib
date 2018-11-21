@@ -1,4 +1,4 @@
-package upwithlib
+package foo
 
 func HelloFromLibrary() string {
 	return "hello.go"

@@ -5,7 +5,8 @@ import (
 	"log"
 	"net/http"
 	"os"
-"github.com/kaihendry/upwithlib/foo"
+
+	"github.com/kaihendry/upwithlib/foo"
 )
 
 func main() {
