@@ -1,0 +1,14 @@
+{
+  "name": "upwithlib",
+  "profile": "mine",
+  "regions": [
+    "ap-southeast-1"
+  ],
+  "stages": {
+    "development": {
+      "proxy": {
+        "command": "gin --port $PORT"
+      }
+    }
+  }
+}
