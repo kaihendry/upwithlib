@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+"github.com/kaihendry/upwithlib/foo"
 )
 
 func main() {
@@ -15,5 +16,5 @@ func main() {
 
 func hello(w http.ResponseWriter, r *http.Request) {
 	// HOW DO I MAKE THIS WORK?
-	fmt.Fprintln(w, hellofromlibrary())
+	fmt.Fprintln(w, foo.HelloFromLibrary())
 }

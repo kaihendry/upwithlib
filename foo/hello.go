@@ -1,5 +1,5 @@
 package upwithlib
 
-func hellofromlibrary() string {
+func HelloFromLibrary() string {
 	return "hello.go"
 }
